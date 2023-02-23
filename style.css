@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: rgb(67, 144, 244);
+    height: 38px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    font-family: 'Mynerve', cursive;
+    display: flex;
+    justify-content: center;
+    padding-top: 3px;
+
+}
+
+.gamecontainer {
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    padding: 10px;
+    
+}
+
+.box {
+    font-family: 'Mynerve', cursive;
+    font-size: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+
+.box:hover {
+    background-color: rgba(173, 121, 216, 0.406);
+    cursor: pointer;
+
+}
+
+.gif {
+    width: 0px;
+    transition: width 1s ease-in-out;
+}
+
+.b-top {
+    border-top: 0;
+}
+
+.b-bottom {
+    border-bottom: 0;
+}
+
+.b-right {
+    border-right: 0;
+}
+
+.b-left {
+    border-left: 0;
+}
+
+#speaker {
+    height: 20px;
+    width: 20px;
+    margin-left: 60px;
+    margin-top: 6px;
+}
+
+#speaker:hover {
+    cursor: pointer;
+}
+
+#reset {
+    margin-top: 13px;
+    border: 2px solid rgb(209, 119, 209);
+    border-radius: 11px;
+    background-color: rgb(209, 119, 209);
+    color: white;
+    margin-left: 16px;
+
+    font-size: 32px;
+    padding: 4px;
+}
+
+#reset:hover {
+    border: 2px solid rgb(125, 119, 209);
+    background-color: rgb(125, 119, 209);
+    margin-top: 13px;
+    border-radius: 11px;
+    color: white;
+    margin-left: 16px;
+    font-size: 32px;
+    padding: 4px;
+}
+.turn-info{
+    font-size: 27px;
+}
+
+@media only screen and (max-width: 400px){
+    .gamecontainer{
+        flex-wrap: wrap;
+    }
+    .container{
+        margin-right: 90px;
+        margin-left: 80px;
+    }
+    .turn-info{
+        font-size: 20px;
+    }
+
+    #reset {
+        margin-top: 13px;
+        border: 2px solid rgb(209, 119, 209);
+        border-radius: 11px;
+        background-color: rgb(209, 119, 209);
+        color: white;
+        margin-left: 16px;
+    
+        font-size: 17px;
+        padding: 4px;
+    }
+    
+    #reset:hover {
+        border: 2px solid rgb(125, 119, 209);
+        background-color: rgb(125, 119, 209);
+        margin-top: 13px;
+        border-radius: 11px;
+        color: white;
+        margin-left: 16px;
+        font-size: 17px;
+        padding: 4px;
+    }
+}
