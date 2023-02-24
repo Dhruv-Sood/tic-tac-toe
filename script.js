@@ -27,14 +27,14 @@ const changeTurn = () => {
 const checkWin = () => {
     let boxtext = document.getElementsByClassName('boxtext')
     let wins = [
-        [0, 1, 2],
-        [3, 4, 5],
-        [6, 7, 8],
-        [0, 3, 6],
-        [1, 4, 7],
-        [2, 5, 8],
-        [0, 4, 8],
-        [2, 4, 6],
+        [0, 1, 2, 0, 0.8, 0, 235],
+        [3, 4, 5, 0, 0.8, 10.4, 235],
+        [6, 7, 8, 0, 0.8, 20.4, 235],
+        [0, 3, 6, 90, 11, 9.5, 235, 235],
+        [1, 4, 7, 90, 11, -0.5, 235],
+        [2, 5, 8, 90, 11, -11, 235],
+        [0, 4, 8, 45, 4, 10, 314],
+        [2, 4, 6, -45, -10, 4.8, 314],
     ]
 
     wins.forEach((e) => {
@@ -42,6 +42,10 @@ const checkWin = () => {
             isGameOver  = true;
             document.querySelector('.turn-info').innerText = boxtext[e[0]].innerText + ' Won';
             document.querySelector('.gif').style.width = "167px"
+
+            document.querySelector("#line").style.transform = `rotate(${e[3]}deg) translateX(${e[4]}vw) translateY(${e[5]}vw)`;
+            document.querySelector("#line").style.width = `${e[6]}px`
+            
         }
     })
 }

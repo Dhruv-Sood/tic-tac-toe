@@ -30,7 +30,8 @@ nav ul {
     grid-template-columns: repeat(3, 10vw);
     grid-template-rows: repeat(3, 10vw);
     padding: 10px;
-    
+    display: grid;
+    position: relative;
 }
 
 .box {
@@ -140,4 +141,15 @@ nav ul {
         font-size: 17px;
         padding: 4px;
     }
+}
+
+#line{
+
+    background-color: #e63a3a;;
+    height: 4px;
+    width: 0px;
+    position: absolute;
+    top: 46px;
+    left: 20px;
+    
 }
